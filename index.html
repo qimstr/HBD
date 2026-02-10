@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивное видео</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Экран приветствия -->
+    <div id="start-overlay" class="start-overlay">
+        <div class="start-content">
+            <h1></h1>
+            <button id="start-btn" class="start-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="rgb(255, 69, 193)">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+                TAP ME !
+            </button>
+        </div>
+    </div>
+
+    <!-- Канвас для конфетті -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="video-container" id="video-container">
+        <!-- Видео для ноутбука -->
+        <video id="desktop-video" class="video desktop-only" playsinline>
+            <source src="media/bd.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+
+        <!-- Видео для телефона -->
+        <video id="mobile-video" class="video mobile-only" playsinline>
+            <source src="media/bd_mobile.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </div>
+
+    <!-- Екінші файлдағы торт анимациясы (iframe арқылы) -->
+    <div id="cake-wrapper" class="cake-wrapper">
+        <iframe id="cake-iframe" src="birthday-cake.html" class="cake-iframe"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
