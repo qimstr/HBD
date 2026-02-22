@@ -135,6 +135,42 @@
             backdrop-filter: none !important;
             -webkit-backdrop-filter: none !important;
         }
+        @media (max-width: 428px) {
+        .fuego {
+            border-radius: 100%;
+            position: absolute;
+            top: -30px; /* Шамның үстінде */
+            left: 50%;
+            margin-left: -2.6px;
+            width: 6.66666667px;
+            height: 18px;
+            z-index: 3; /* От ең жоғарғы қабатта */
+        }
+               @media (max-width: 428px) {
+        .fuego {
+            border-radius: 100%;
+            position: absolute;
+            top: -20px; /* Шамның үстінде */
+            left: 50%;
+            margin-left: -2.6px;
+            width: 6.66666667px;
+            height: 18px;
+            z-index: 3; /* От ең жоғарғы қабатта */
+        }
+          .cake {
+            position: absolute;
+            top: 223px;
+            left: 50%;
+            margin-left: -2.4px;
+            margin-top: -8.33333333px;
+            width: 5px;
+            height: 35px;
+            transform: translateY(-400px);
+            backface-visibility: hidden;
+            animation: in 500ms 6s ease-out forwards;
+            z-index: 2; /* Шам торттың үстінде */
+        }
+    }
     </style>
 </head>
 <body>
@@ -307,4 +343,5 @@
         document.body.style.webkitBackdropFilter = 'none !important';
     </script>
 </body>
+
 </html>
