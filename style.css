@@ -97,6 +97,8 @@ body {
 .start-content {
     text-align: center;
     color: rgb(255, 69, 193);
+    padding: 20px;
+    max-width: 90%;
 }
 
 .start-content h1 {
@@ -105,6 +107,7 @@ body {
     font-family: Arial, sans-serif;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    word-break: break-word;
 }
 
 .start-button {
@@ -122,6 +125,9 @@ body {
     font-family: Arial, sans-serif;
     font-weight: 600;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 100%;
+    white-space: nowrap;
 }
 
 .start-button:hover {
@@ -137,6 +143,7 @@ body {
 .start-button svg {
     width: 24px;
     height: 24px;
+    flex-shrink: 0;
 }
 
 .start-button:hover svg path {
@@ -170,14 +177,42 @@ body {
     pointer-events: auto;
 }
 
+/* Телефонға арналған медиа сұрау */
 @media (max-width: 768px) {
+    .start-content {
+        padding: 15px;
+        width: 100%;
+    }
+    
     .start-content h1 {
         font-size: 2rem;
         margin-bottom: 1.5rem;
+        line-height: 1.3;
     }
     
     .start-button {
-        padding: 15px 30px;
+        padding: 15px 25px;
         font-size: 1rem;
+        white-space: normal;
+        word-break: break-word;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .start-button svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Өте кішкентай экрандар үшін (мысалы, iPhone SE) */
+@media (max-width: 375px) {
+    .start-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .start-button {
+        padding: 12px 20px;
+        font-size: 0.9rem;
     }
 }
